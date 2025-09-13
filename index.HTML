@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Голос Народа - Официальный сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo h1 {
+            font-size: 2.5em;
+            color: #1a2a6c;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo p {
+            font-size: 1.2em;
+            color: #b21f1f;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #1a2a6c;
+            padding: 15px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fdbb2d;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            color: #1a2a6c;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(178, 31, 31, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(178, 31, 31, 0.4);
+            background: linear-gradient(45deg, #fdbb2d, #b21f1f);
+        }
+
+        .discord-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #5865F2, #7289DA);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(88, 101, 242, 0.3);
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .discord-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+            background: linear-gradient(45deg, #7289DA, #5865F2);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-section h2 {
+            font-size: 2.5em;
+            color: #1a2a6c;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        footer {
+            background: rgba(26, 42, 108, 0.95);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .hero h2 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+            
+            .discord-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Голос Народа</h1>
+                <p>Политическая партия</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#program">Программа</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Ваш голос имеет значение!</h2>
+            <p>Присоединяйтесь к нам и вместе мы создадим лучшее будущее для нашей страны. Ваше мнение важно для нас!</p>
+            <button class="cta-button" onclick="redirectToForm()">
+                Оставить обращение
+            </button>
+        </section>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Прозрачность</h3>
+                <p>Открытость во всех процессах и решениях</p>
+            </div>
+            <div class="feature-card">
+                <h3>Справедливость</h3>
+                <p>Равные возможности для каждого гражданина</p>
+            </div>
+            <div class="feature-card">
+                <h3>Развитие</h3>
+                <p>Прогрессивные реформы для будущего страны</p>
+            </div>
+        </div>
+
+        <section id="contact" class="contact-section">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <p>Свяжитесь с нами для сотрудничества и получения дополнительной информации</p>
+                <p>Email: info@golos-naroda.ru</p>
+                <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+            </div>
+            <button class="discord-button" onclick="redirectToDiscord()">
+                Присоединиться к нашему Discord
+            </button>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Политическая партия "Голос Народа". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToForm() {
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLSezvyU0Q28Xt9riboqX8UFgIL79H56QweO9aloAArRQGPBTFA/viewform?usp=header', '_blank');
+        }
+
+        function redirectToDiscord() {
+            window.open('https://discord.gg/qY3pxVAW', '_blank');
+        }
+    </script>
+</body>
+</html>
